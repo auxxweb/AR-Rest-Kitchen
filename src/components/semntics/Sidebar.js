@@ -6,7 +6,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 function Sidebar({ isOpen, setIsOpen }) {
   const navigate = useNavigate();
   const location = useLocation();
-
+  const handleItemClick = () => {
+    if (window.innerWidth < 1024) {
+      setIsOpen(false);
+    }
+  };
   return (
     <Transition
       show={isOpen}
@@ -104,7 +108,7 @@ fill={
                 }
               />
             </svg>
-            <span className={`text-custom-16 ml-4`}>New Orders</span>
+            <span onClick={() => handleItemClick} className={`text-custom-16 ml-4`}>New Orders</span>
           </span>
         </div>
 
@@ -139,7 +143,7 @@ fill={
               />
             </svg>
 
-            <span className="text-custom-16 ml-4">Ongoing Orders</span>
+            <span onClick={() => handleItemClick} className="text-custom-16 ml-4">Ongoing Orders</span>
           </span>
         </div>
         <div
@@ -174,7 +178,7 @@ fill={
               />
             </svg>
 
-            <span className="text-custom-16 ml-4">Completed Orders</span>
+            <span onClick={() => handleItemClick} className="text-custom-16 ml-4">Completed Orders</span>
           </span>
         </div>
         <div
@@ -208,7 +212,7 @@ fill={
               />
             </svg>
 
-            <span className="text-custom-16 ml-4">Cancelled Orders</span>
+            <span onClick={() => handleItemClick} className="text-custom-16 ml-4">Cancelled Orders</span>
           </span>
         </div>
             {/* <div
