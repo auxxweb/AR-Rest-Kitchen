@@ -32,7 +32,7 @@ function ContentArea() {
   return (
     <Routes>
       {/* Use Routes to define all your app routes */}
-      <Route path="/" element={<DashBoard />} />
+      <Route path="/" element={<Zones />} />
       <Route path="/login" element={<Login />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
       <Route path="/changePassword/:forgotId" element={<ChangePassword />} />

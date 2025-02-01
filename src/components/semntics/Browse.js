@@ -24,7 +24,7 @@ function Browse() {
       }
     } else {
       if (!userData) {
-        navigate("/login");
+        navigate("/zones");
       }
     }
     //eslint-disable-next-line
