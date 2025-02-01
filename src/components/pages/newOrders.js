@@ -355,22 +355,14 @@ const Zones = () => {
                 <td className="px-4 py-2 border-r border-gray-400">
                   <div className=" -space-x-2">
                     {order.menu1} x 6   {"    "}
-                    <span className="inline-block rounded-full p-2 m-2 border border-red-400 text-sm w-[145px] text-center">
-                      {"Reject Item"}
-                    </span>
+                   
                     {/* <span className="inline-block rounded-full p-2 border border-gray-400 text-sm w-[145px] text-center">
                       {"Move to kitchen"}
                     </span> */}
                   </div>
-                  <div className=" -space-x-2">{order.menu2} x 2  <span className="inline-block rounded-full p-2 m-2 border border-red-400 text-sm w-[145px] text-center">
-                      {"Reject Item"}
-                    </span></div>
-                  <div className=" -space-x-2">{order.menu1} x 1  <span className="inline-block rounded-full p-2 m-2 border border-red-400 text-sm w-[145px] text-center">
-                      {"Reject Item"}
-                    </span></div>
-                  <div className=" -space-x-2">{order.menu2} x 1  <span className="inline-block rounded-full p-2 m-2 border border-red-400 text-sm w-[145px] text-center">
-                      {"Reject Item"}
-                    </span></div>
+                  <div className=" -space-x-2">{order.menu2} x 2  </div>
+                  <div className=" -space-x-2">{order.menu1} x 1  </div>
+                  <div style={{display:"flex",justifyContent:"space-between"}} className=" -space-x-2">{order.menu2} x 4  </div>
                 </td>
                 <td className="px-4 py-2 border-r border-gray-400">
                   <div className="flex -space-x-2">{order.tableNo}</div>
@@ -379,11 +371,11 @@ const Zones = () => {
                   {order.billNo}
                 </td>
                 <td className="p-2 border-b border-r border-gray-400">
-                <span className="inline-block rounded-full p-2 border border-gray-400 text-sm w-[145px] text-center">
+                <span className="inline-block rounded-full p-2 m-2 border border-gray-400 text-sm w-[145px] text-center">
                   {"Mark as Preparing"}
                 </span>
-                <span className="inline-block rounded-full p-2 border border-gray-400 text-sm w-[145px] text-center">
-                  {"Move to kitchen"}
+                <span className="inline-block rounded-full p-2 m-2 border border-red-400 text-sm w-[145px] text-center">
+                  {"Reject Order"}
                 </span>
               </td>
                 {/* <td className="px-4 py-2">

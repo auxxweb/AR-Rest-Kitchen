@@ -642,7 +642,7 @@ const Judges = () => {
               Quantity
             </th>
             <th className="px-4 py-4 text-left border-r border-gray-400">
-              Table Nu.
+              Table No.
             </th>
             <th className="px-4 py-4 text-left border-r border-gray-400">
               Serve Time
@@ -746,7 +746,7 @@ const Judges = () => {
                   {judge?.serveTime}
                 </td>
                 <td className="px-4 py-2 border-r border-gray-400">
-                  <button
+                  {/* <button
                     disabled={isLoadingBlock}
                     onClick={() => handleEditClick(judge)}
                   >
@@ -755,11 +755,11 @@ const Judges = () => {
                       src="/icons/edit.svg"
                       className="w-6 h-6 rounded-full mr-2"
                     />
-                  </button>
+                  </button> */}
                   <button onClick={() => handleDeleteClick(judge?._id)}>
                     <img
                       alt="pics"
-                      src="/icons/delete.svg"
+                      src="/icons/cancel.svg"
                       className="w-6 h-6 rounded-full mr-2 fill-red-500"
                     />
                   </button>

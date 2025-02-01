@@ -13,7 +13,7 @@ import { Route, Routes } from "react-router-dom";
 // import Designation from "../pages/Designation";
 // import SettingAndConfi from "../pages/SettingAndConfi";
 import JudgeDetails from "../pages/JudgeDetails";
-import DashBoard from "../pages/DashBoard";
+import DashBoard from "../pages/newOrders";
 import Zones from "../pages/newOrders";
 import Login from "../pages/Login";
 import Judges from "../pages/ongoingOrders";
