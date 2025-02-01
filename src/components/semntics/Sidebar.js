@@ -16,13 +16,13 @@ function Sidebar({ isOpen, setIsOpen }) {
       leave="transition duration-300 transfo rm"
       leaveFrom="translate-x-0"
       leaveTo="-translate-x-full"
-      className="bg-[#00000] w-[268px] h-full space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform lg:relative lg:translate-x-0 z-50"
+      className="bg-[#FFFFFF] w-[268px] h-full space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform lg:relative lg:translate-x-0 z-50"
     >
       {/* Sidebar content */}
       <div>
         {/* Close button for mobile */}
         <button
-          className="lg:hidden text-white focus:outline-none absolute right-4 top-4"
+          className="lg:hidden text-black focus:outline-none absolute right-4 top-4"
           onClick={() => setIsOpen(false)}
         >
           <svg
