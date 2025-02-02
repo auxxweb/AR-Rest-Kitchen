@@ -1,5 +1,5 @@
 import React from "react";
-import { Transition, Disclosure} from "@headlessui/react";
+import { Transition, Disclosure } from "@headlessui/react";
 
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -20,22 +20,19 @@ function Sidebar({ isOpen, setIsOpen }) {
       leave="transition duration-300 transfo rm"
       leaveFrom="translate-x-0"
       leaveTo="-translate-x-full"
-      className="bg-[#FFFFFF] w-[268px] h-full space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform lg:relative lg:translate-x-0 z-50"
-    >
+      className="bg-[#FFFFFF] w-[268px] h-full space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform lg:relative lg:translate-x-0 z-50">
       {/* Sidebar content */}
       <div>
         {/* Close button for mobile */}
         <button
           className="lg:hidden text-black focus:outline-none absolute right-4 top-4"
-          onClick={() => setIsOpen(false)}
-        >
+          onClick={() => setIsOpen(false)}>
           <svg
             className="w-6 h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -85,8 +82,7 @@ function Sidebar({ isOpen, setIsOpen }) {
             location?.pathname?.split("/")[1] === "zones"
               ? "text-[#000000]"
               : "text-[#909294]"
-          }  hover:text-[#F8BF40]`}
-        >
+          }  hover:text-[#F8BF40]`}>
           <span className="flex items-center ml-2 ">
             <svg
               width="24"
@@ -97,18 +93,21 @@ function Sidebar({ isOpen, setIsOpen }) {
                   ? "#000000"
                   : "currentColor"
               }
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
-d="M3 17h18c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1s.45 1 1 1zm2-4h14v-1c0-3.31-2.69-6-6-6h-2c-3.31 0-6 2.69-6 6v1zm7-9c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zM8 20c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1z"
-fill={
+                d="M3 17h18c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1s.45 1 1 1zm2-4h14v-1c0-3.31-2.69-6-6-6h-2c-3.31 0-6 2.69-6 6v1zm7-9c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zM8 20c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1z"
+                fill={
                   location?.pathname?.split("/")[1] === "zones"
                     ? "#000000"
                     : "currentColor"
                 }
               />
             </svg>
-            <span onClick={() => handleItemClick} className={`text-custom-16 ml-4`}>New Orders</span>
+            <span
+              onClick={() => handleItemClick()}
+              className={`text-custom-16 ml-4`}>
+              New Orders
+            </span>
           </span>
         </div>
 
@@ -118,8 +117,7 @@ fill={
             location?.pathname?.split("/")[1] === "judges"
               ? "text-[#000000]"
               : "text-[#909294]"
-          }  hover:text-[#F8BF40]`}
-        >
+          }  hover:text-[#F8BF40]`}>
           <span className="flex items-center ml-2">
             <svg
               width="20"
@@ -131,11 +129,10 @@ fill={
                   : "currentColor"
               }
               xmlns="http://www.w3.org/2000/svg"
-              className="transition-colors duration-200"
-            >
+              className="transition-colors duration-200">
               <path
-  d="M32 3l-30 15 30 15 30-15-30-15zm0 9.5l20 10-20 10-20-10 20-10zm0 11l-20 10v7l20-10 20 10v-7l-20-10zm0 8.5l-10 5v2l10-5 10 5v-2l-10-5z"
-fill={
+                d="M32 3l-30 15 30 15 30-15-30-15zm0 9.5l20 10-20 10-20-10 20-10zm0 11l-20 10v7l20-10 20 10v-7l-20-10zm0 8.5l-10 5v2l10-5 10 5v-2l-10-5z"
+                fill={
                   location?.pathname?.split("/")[1] === "judges"
                     ? "#000000"
                     : "currentColor"
@@ -143,17 +140,20 @@ fill={
               />
             </svg>
 
-            <span onClick={() => handleItemClick} className="text-custom-16 ml-4">Ongoing Orders</span>
+            <span
+              onClick={() => handleItemClick()}
+              className="text-custom-16 ml-4">
+              Ongoing Orders
+            </span>
           </span>
         </div>
         <div
           onClick={() => navigate("/participants")}
           className={`cursor-pointer flex items-center ${
-            location?.pathname?.split('/')[1] === "participants"
+            location?.pathname?.split("/")[1] === "participants"
               ? "text-[#000000]"
               : "text-[#909294]"
-          }  hover:text-[#F8BF40]`}
-        >
+          }  hover:text-[#F8BF40]`}>
           <span className="flex items-center ml-2">
             <svg
               width="20"
@@ -165,12 +165,10 @@ fill={
                   : "currentColor"
               }
               xmlns="http://www.w3.org/2000/svg"
-              className="transition-colors duration-200"
-            >
+              className="transition-colors duration-200">
               <path
                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"
-
-fill={
+                fill={
                   location?.pathname?.split("/")[1] === "participants"
                     ? "#000000"
                     : "currentColor"
@@ -178,17 +176,20 @@ fill={
               />
             </svg>
 
-            <span onClick={() => handleItemClick} className="text-custom-16 ml-4">Completed Orders</span>
+            <span
+              onClick={() => handleItemClick()}
+              className="text-custom-16 ml-4">
+              Completed Orders
+            </span>
           </span>
         </div>
         <div
           onClick={() => navigate("/questions")}
           className={`cursor-pointer flex items-center ${
-            location?.pathname?.split('/')[1] === "questions"
+            location?.pathname?.split("/")[1] === "questions"
               ? "text-[#000000]"
               : "text-[#909294]"
-          }  hover:text-[#F8BF40]`}
-        >
+          }  hover:text-[#F8BF40]`}>
           <span className="flex items-center ml-2">
             <svg
               width="20"
@@ -200,11 +201,10 @@ fill={
                   : "currentColor"
               }
               xmlns="http://www.w3.org/2000/svg"
-              className="transition-colors duration-200"
-            >
+              className="transition-colors duration-200">
               <path
-d="M32 2C15.4 2 2 15.4 2 32s13.4 30 30 30 30-13.4 30-30S48.6 2 32 2zm0 52C18.8 54 8 43.2 8 32S18.8 10 32 10s24 10.8 24 24-10.8 24-24 24zm0-14a4 4 0 110 8 4 4 0 010-8zm1-6c-.6 0-1-.4-1-1v-2c0-3.6 3.4-5 5.4-6.1 1.6-.8 2.6-2.5 2.6-4.4 0-2.9-2.4-5.2-5.5-5.2-3.3 0-5.5 2.3-5.5 5.5 0 .6-.4 1-1 1h-2c-.6 0-1-.4-1-1 0-5.1 4.1-9.5 9.5-9.5 5.2 0 9.5 4.2 9.5 9.2 0 3.2-1.7 6-4.5 7.5-2.2 1.2-3.5 2.1-3.5 3.8v2c0 .6-.4 1-1 1h-2z"
-fill={
+                d="M32 2C15.4 2 2 15.4 2 32s13.4 30 30 30 30-13.4 30-30S48.6 2 32 2zm0 52C18.8 54 8 43.2 8 32S18.8 10 32 10s24 10.8 24 24-10.8 24-24 24zm0-14a4 4 0 110 8 4 4 0 010-8zm1-6c-.6 0-1-.4-1-1v-2c0-3.6 3.4-5 5.4-6.1 1.6-.8 2.6-2.5 2.6-4.4 0-2.9-2.4-5.2-5.5-5.2-3.3 0-5.5 2.3-5.5 5.5 0 .6-.4 1-1 1h-2c-.6 0-1-.4-1-1 0-5.1 4.1-9.5 9.5-9.5 5.2 0 9.5 4.2 9.5 9.2 0 3.2-1.7 6-4.5 7.5-2.2 1.2-3.5 2.1-3.5 3.8v2c0 .6-.4 1-1 1h-2z"
+                fill={
                   location?.pathname?.split("/")[1] === "questions"
                     ? "#000000"
                     : "currentColor"
@@ -212,10 +212,14 @@ fill={
               />
             </svg>
 
-            <span onClick={() => handleItemClick} className="text-custom-16 ml-4">Cancelled Orders</span>
+            <span
+              onClick={() => handleItemClick()}
+              className="text-custom-16 ml-4">
+              Cancelled Orders
+            </span>
           </span>
         </div>
-            {/* <div
+        {/* <div
               onClick={() => navigate("/bundles")}
               className={`cursor-pointer flex items-center ${
                 location?.pathname?.split('/')[1] === "bundles"
@@ -249,7 +253,6 @@ fill={
                 <span className="text-custom-16 ml-4">Settings</span>
               </span>
             </div> */}
-
 
         {/* <div
           onClick={() => navigate("/result")}

@@ -48,7 +48,7 @@ const Judges = () => {
   //   search: searchValue,
   //   zones: selectedZones,
   // });
-  const { data: zoneList, refetch: ZoneListsRefetch } = useGetZonesListQuery();
+  // const { data: zoneList, refetch: ZoneListsRefetch } = useGetZonesListQuery();
   const [addJudge, { isLoading: isLoadingMutation }] = useAddJudgeMutation({});
   const [deleteJudge, { isLoading: isLoadingDelete }] =
     useDeleteJudgeMutation();
@@ -68,18 +68,18 @@ const Judges = () => {
     const formData = new FormData(event.target);
     const isMain = !!formData?.get("isMain");
 
-    if (!zonesList || !zonesList.value) {
-      toast.warning("Please select a zone", {
-        position: "top-right",
-        duration: 2000,
-        style: {
-          backgroundColor: "#e9c70b", // Custom red color for error
-          color: "#FFFFFF", // Text color
-        },
-        dismissible: true,
-      });
-      return; // Stop the form from submitting if no zone is selected
-    }
+    // if (!zonesList || !zonesList.value) {
+    //   toast.warning("Please select a zone", {
+    //     position: "top-right",
+    //     duration: 2000,
+    //     style: {
+    //       backgroundColor: "#e9c70b", // Custom red color for error
+    //       color: "#FFFFFF", // Text color
+    //     },
+    //     dismissible: true,
+    //   });
+    //   return; // Stop the form from submitting if no zone is selected
+    // }
 
     formData?.append("zone", zonesList?.value);
     formData?.set("isMain", isMain);
@@ -250,9 +250,9 @@ const Judges = () => {
     }
   };
 
-  const selectOption = zoneList?.zones?.map((zone) => {
-    return { value: zone?._id, label: zone?.name };
-  });
+  // const selectOption = zoneList?.zones?.map((zone) => {
+  //   return { value: zone?._id, label: zone?.name };
+  // });
 
   const toggleFilterPopup = () => {
     setIsFilterPopupOpen(!isFilterPopupOpen);
@@ -332,7 +332,7 @@ const Judges = () => {
                     </label>
                     <Select
                       className="border-gray-400"
-                      options={selectOption}
+                      options={[]}
                       onChange={handleChange}
                       value={zonesList}
                       isMulti={false}
@@ -511,7 +511,7 @@ const Judges = () => {
                 </button>
                 <button
                   disabled={isLoadingDelete}
-                  onClick={handleDelete}
+                  onClick={handleDeleteModalClose}
                   className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 m-2 px-8 rounded-2xl"
                 >
                   YES
@@ -533,7 +533,7 @@ const Judges = () => {
                 </button>
                 <button
                   disabled={isLoadingBlock}
-                  onClick={handleBlockJudge}
+                  onClick={handleBlockModalClose}
                   className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 m-2 px-8 rounded-2xl"
                 >
                   {isLoadingBlock ? "loading" : "YES"}
